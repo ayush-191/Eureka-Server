@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Maven dependencies..."
+      - mvn install -DskipTests=true
+
+  build:
+    commands:
+      - echo "Building JAR file..."
+      - mvn clean package -DskipTests=true
+
+  post_build:
+    commands:
+      - echo "Build complete."
+
+artifacts:
+  files:
+    - target/*.jar
+  discard-paths: yes

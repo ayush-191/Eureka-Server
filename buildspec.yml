@@ -7,7 +7,7 @@ phases:
       - mvn install -DskipTests=true
 
   build:
-    commands:
+    commands:git
       - echo "Building JAR file..."
       - mvn clean package -DskipTests=true
 
